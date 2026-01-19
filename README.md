@@ -38,12 +38,12 @@ src/
     npm install
 ```
 
-2.  **개발 서버 실행**
+1.  **개발 서버 실행**
 ```bash
 npm start
 ```
 
-실행 후 웹브라우저에서 [http://localhost:3000](http://localhost:3000) 앱 확인
+1. **실행 확인** : 실행 후 웹브라우저에서 [http://localhost:3000](http://localhost:3000) 앱 확인
 
 ## 라이선스
 - MIT License
