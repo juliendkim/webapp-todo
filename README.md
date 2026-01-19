@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Todo App (웹앱 개발 특강 1일차 실습)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React로 구현된 간단한 할 일 목록(Todo List) 애플리케이션
 
-## Available Scripts
+## 기능 소개
 
-In the project directory, you can run:
+1.  **할 일 추가 (Create):** 입력 필드에 할 일 작성 후 '추가' 버튼을 눌러 새로운 할 일 추가
+1.  **할 일 목록 조회 (Read):** 추가된 할 일들을 리스트 형태로 확인
+1.  **할 일 완료 처리 (Update):** 체크박스나 텍스트를 클릭하여 할 일의 완료 상태를 토글(Toggle)할 수 있음. 완료된 항목은 취소선이 표시됨
+1.  **할 일 삭제 (Delete):** 각 항목의 '삭제' 버튼을 클릭하여 목록에서 제거
 
-### `npm start`
+## 기술 스택
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   **Front-end:** React (v19)
+*   **Build Tool:** Create React App (react-scripts)
+*   **Language:** JavaScript
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 프로젝트 구조
 
-### `npm test`
+```
+src/
+├── App.js      # 메인 컴포넌트 (Todo 로직 및 UI 포함)
+├── App.css     # App 컴포넌트 스타일
+├── index.js    # 앱 진입점 (Entry Point)
+```
+### 주요 코드 로직 (`App.js`)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*   `useState` Hook을 사용하여 할 일 목록(`todos`)과 입력값(`inputValue`) 상태를 관리
+*   `handleInputChange`: 사용자 입력을 실시간으로 상태에 반영
+*   `handleSubmit`: 폼 제출 시 빈 값을 확인하고 새로운 Todo 객체(`id`, `text`, `completed`)를 생성하여 목록에 추가
+*   `toggleTodo`: 특정 Todo의 완료 상태(`completed`)를 반전
+*   `deleteTodo`: `filter` 함수를 사용하여 특정 Todo를 목록에서 제거
 
-### `npm run build`
+## 실행 방법
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.  **의존성 설치**
+```bash
+    npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2.  **개발 서버 실행**
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+실행 후 웹브라우저에서 [http://localhost:3000](http://localhost:3000) 앱 확인
 
-### `npm run eject`
+## 라이선스
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이 프로젝트는 교육 목적으로 작성되었습니다.
