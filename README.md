@@ -46,5 +46,5 @@ npm start
 실행 후 웹브라우저에서 [http://localhost:3000](http://localhost:3000) 앱 확인
 
 ## 라이선스
-
-이 프로젝트는 교육 목적으로 작성되었습니다.
+- MIT License
+- 이 프로젝트는 교육 목적으로 작성되었습니다.
