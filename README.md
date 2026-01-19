@@ -21,7 +21,7 @@ React로 구현된 간단한 할 일 목록(Todo List) 애플리케이션
 src/
 ├── App.js      # 메인 컴포넌트 (Todo 로직 및 UI 포함)
 ├── App.css     # App 컴포넌트 스타일
-├── index.js    # 앱 진입점 (Entry Point)
+└── index.js    # 앱 진입점 (Entry Point)
 ```
 ### 주요 코드 로직 (`App.js`)
 
